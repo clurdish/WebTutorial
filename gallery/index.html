@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../stylesheets/stylesheet1.css" rel="stylesheet" type="text/css">
+        <script>
+            var sources = ["Magic_logs_detail.png.webp", "Logs_detail.png.webp"];
+            var counter = 0;
+            
+            function swap()
+            {
+                document.getElementById("gallery1").src = sources[counter];
+                counter = (counter +1)%2;
+            }
+        </script>
+    </head>
+    <body onLoad="setInterval(swap, 3000)">
+        <header class="header">
+            Gallery
+        </header>
+        <div class="content" style="text-align:center;">
+            <img src="Logs_detail.png.webp" id="gallery1" alt="logs" height="200" width="200">
+        </div>
+    </body>
+</html>
